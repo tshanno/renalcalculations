@@ -280,8 +280,8 @@ $ProblemType = ProblemType::calculation;
 $ImgSrc = "./images/disease_patient_lab_values.png";
 $ProblemText = '<p>Calculate free water clearance (C<sub>H2O</sub>) for the post-surgical patient and compare 
 this value to that of the normal, volume expanded patient (10.8 ml/min).</p>';
-$ProblemAnswer = '0.33';
-$ProblemTolerance = '0.1';
+$ProblemAnswer = '1.2';
+$ProblemTolerance = '0.2';
 $AttmeptOne = "<p><b>That's incorrect</b>.</p>
 <p>Free water clearance = V – C<sub>OSM</sub></p>
 <p>The C<sub>OSM</sub> is the osmolar clearance and represents the volume of isomotic solution (isosmotic to plasma) 
