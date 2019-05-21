@@ -1,0 +1,81 @@
+<?php
+header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
+header("Pragma: no-cache"); // HTTP 1.0.
+header("Expires: 0"); // Proxies.
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src='./includes/functions.js'></script>
+	<link rel="stylesheet" href="./includes/stylesheet.css">
+	<title>Osmolarity and Cell Volume</title>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<p class='alignleft'>
+			<span class='label' id='programname'>Osmolarity and Cell Volume</span>
+			<input type='submit' class='openpopup' id='opendirections' value='Directions' divid='directions' />
+			<input type='submit' class='openpopup' id='openabout' value='About' divid='about' />
+			</p>
+			<p class='alignright'>
+			<input type="hidden" id="A" name="choice" value="A"><span class='label' id='label_A' value='enabled' hidden=true>A</span> 
+  			<input type="hidden" id="B" name="choice" value="B"><span class='label' id='label_B' value='enabled' hidden=true>B</span> 
+			<input type="hidden" id="C" name="choice" value="C"><span class='label' id='label_C' value='enabled' hidden=true>C</span>
+			<span class='label' id='label_numeral' hidden=true >Answer:</span><input type="hidden" id="numberanswer" name="numeral" value=0 step="Any">
+			<input type='submit' id='checkanswers' value='Evaluate' submitcount='0' disabled=true/>
+			<input type='submit' id='nextproblem' value='Next' disabled=true /> 
+			</p>
+			<div style="clear: both;"></div>
+		</div>
+		<div id="menu"></div>
+		<div id="main">
+			<input type='hidden' id='problemid' value='' />
+			<input type='hidden' id='subproblemid' value='' />
+			<input type='hidden' id='shownewsectionalert' value=true />
+			<input type='hidden' id='shownextproblemalert' value=true />
+			<div id='problemname'></div>
+			<div id='problemstem'></div>
+			<div id='problemimagediv'>
+			<img id='problemimage' />
+			</div>
+			<div id='feedback'></div>
+			<div class='hover_popup' id='directions'>
+				<span class='popup_helper'></span>
+				<div>
+					<div class='popupCloseButton' divid='directions'>X</div>
+					<p>Above is a model of the cardiovascular system.  "
+                + "It consists of a heart and a circulation that perfuses five numbered organs or tissues as shown.   "
+                + "This system HAS NO REFLEXES and the circulation is assumed to be  noncompliant, "
+                + "but in all other ways it behaves like a normal, human CV system.  The pressure "
+                + "at the aorta (i.e. the MAP) is maintained constant at 100 mmHg (through autonomic reflexes).  "
+                + "Blood flow (Q) through each  of the organs/tissues "
+                + "is shown, as are their distances (in cm) from the heart.</p>" +
+                "<p> Please select a problem from the list to the left. </p>
+				</div>
+			</div>
+			<div class='hover_popup' id='about'>
+				<span class='popup_helper'></span>
+				<div>
+					<div class='popupCloseButton' divid='about'>X</div>
+					Osmolarity and Cell Volume Regulation<br />
+					version 1.1<br /><br />
+					Designed and written by Thomas R. Shannon<br /><br />
+					Rush University<br />
+					Chicago, IL<br /><br />
+					Some of the problems are based upon those designed by Richard Levis
+				</div>
+			</div>
+			<div class='hover_popup' id='about'>
+				<span class='popup_helper'></span>
+				<div>
+					<div class='popupCloseButton' divid='about'>X</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
